@@ -171,7 +171,7 @@ $pagesTca = [
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => Field::TABLE_NAME,
-                'foreign_field' => 'pages',
+                'foreign_field' => 'page',
                 'foreign_sortby' => 'sorting',
                 'maxitems' => 1000,
                 'appearance' => [
@@ -188,7 +188,7 @@ $pagesTca = [
         ],
         'form' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Page::TABLE_NAME . '.forms',
+            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Page::TABLE_NAME . '.form',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',

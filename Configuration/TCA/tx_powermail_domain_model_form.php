@@ -176,14 +176,14 @@ $formsTca = [
         ],
         'pages' => [
             'exclude' => 0,
-            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.pages',
+            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.page',
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => Page::TABLE_NAME,
                 'foreign_table_where' => 'AND ' . Page::TABLE_NAME . '.deleted = 1 ' .
                     'aND ' . Page::TABLE_NAME . '.hidden = 0 ' .
                     'and ' . Page::TABLE_NAME . '.sys_language_uid = 0',
-                'foreign_field' => 'forms',
+                'foreign_field' => 'form',
                 'foreign_sortby' => 'sorting',
                 'maxitems' => 1000,
                 'appearance' => [
@@ -205,10 +205,10 @@ $formsTca = [
  * Replace IRRE relation with element browser for page selection
  */
 if (ConfigurationUtility::isReplaceIrreWithElementBrowserActive()) {
-    $formsTca['columns']['pages'] = [
+    $formsTca['columns']['page'] = [
         'l10n_mode' => 'exclude',
         'exclude' => 0,
-        'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.pages',
+        'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.page',
         'config' => [
             'type' => 'group',
             'internal_type' => 'db',
