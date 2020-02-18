@@ -155,7 +155,7 @@ class PluginPreview implements PageLayoutViewDrawItemHookInterface
      * @param int $uid Form uid
      * @return string
      */
-    protected function getFormTitleByUid(int $uid): string
+    protected function getFormTitleByUid(int $uid)
     {
         $uid = $this->getLocalizedFormUid($uid, $this->getSysLanguageUid());
         $row = BackendUtilityCore::getRecord(

@@ -74,7 +74,7 @@ class SessionViewHelper extends AbstractViewHelper
             []
         );
         $pageArguments = GeneralUtility::makeInstance(PageArguments::class, 1, 0, []);
-        $nullFrontend = GeneralUtility::makeInstance(NullFrontend::class, 'pages');
+        $nullFrontend = GeneralUtility::makeInstance(NullFrontend::class, 'page');
         $cacheManager = GeneralUtility::makeInstance(CacheManager::class);
         try {
             $cacheManager->registerCache($nullFrontend);

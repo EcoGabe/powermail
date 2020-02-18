@@ -351,7 +351,7 @@ class ShowFormNoteEditForm extends AbstractFormElement
                 $rows = $queryBuilder
                     ->select('title')
                     ->from(Field::TABLE_NAME)
-                    ->where('pages = ' . (int)$uidRow['uid'])
+                    ->where('page = ' . (int)$uidRow['uid'])
                     ->execute()
                     ->fetchAll();
                 foreach ($rows as $row) {

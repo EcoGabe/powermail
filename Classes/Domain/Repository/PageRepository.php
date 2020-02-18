@@ -20,7 +20,7 @@ class PageRepository extends AbstractRepository
     {
         $pageName = '';
         $query = $this->createQuery();
-        $sql = 'select uid,title from pages where uid = ' . (int)$uid . ' limit 1';
+        $sql = 'select uid,title from page where uid = ' . (int)$uid . ' limit 1';
         $result = $query->statement($sql)->execute(true);
         if (!empty($result[0]['title'])) {
             $pageName = $result[0]['title'];
@@ -35,7 +35,7 @@ class PageRepository extends AbstractRepository
     public function getPropertiesFromUid(int $uid): array
     {
         $query = $this->createQuery();
-        $sql = 'select * from pages where uid = ' . (int)$uid . ' limit 1';
+        $sql = 'select * from page where uid = ' . (int)$uid . ' limit 1';
         $result = $query->statement($sql)->execute(true);
         return $result[0];
     }

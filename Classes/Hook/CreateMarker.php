@@ -288,8 +288,8 @@ class CreateMarker
         // if pages open (fields via IRRE)
         if ($formUid === 0) {
             foreach (array_keys((array)$this->data[Page::TABLE_NAME]) as $uid) {
-                if (!empty($this->data[Page::TABLE_NAME][$uid]['forms'])) {
-                    $formUid = (int)$this->data[Page::TABLE_NAME][$uid]['forms'];
+                if (!empty($this->data[Page::TABLE_NAME][$uid]['form'])) {
+                    $formUid = (int)$this->data[Page::TABLE_NAME][$uid]['form'];
                 }
             }
         }
@@ -297,8 +297,8 @@ class CreateMarker
         // if field is directly opened (no IRRE OR opened pages with their IRRE fields
         if ($formUid === 0) {
             foreach (array_keys((array)$this->data[Field::TABLE_NAME]) as $uid) {
-                if (!empty($this->data[Field::TABLE_NAME][$uid]['pages'])) {
-                    $formUid = $this->getFormUidFromRelatedPage((int)$this->data[Field::TABLE_NAME][$uid]['pages']);
+                if (!empty($this->data[Field::TABLE_NAME][$uid]['page'])) {
+                    $formUid = $this->getFormUidFromRelatedPage((int)$this->data[Field::TABLE_NAME][$uid]['page']);
                 }
             }
         }
