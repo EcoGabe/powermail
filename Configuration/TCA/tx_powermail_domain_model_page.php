@@ -188,7 +188,7 @@ $pagesTca = [
         ],
         'form' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Page::TABLE_NAME . '.form',
+            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Page::TABLE_NAME . '.forms',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',

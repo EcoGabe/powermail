@@ -176,7 +176,7 @@ $formsTca = [
         ],
         'pages' => [
             'exclude' => 0,
-            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.page',
+            'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.pages',
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => Page::TABLE_NAME,
@@ -208,7 +208,7 @@ if (ConfigurationUtility::isReplaceIrreWithElementBrowserActive()) {
     $formsTca['columns']['page'] = [
         'l10n_mode' => 'exclude',
         'exclude' => 0,
-        'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.page',
+        'label' => 'LLL:EXT:powermail/Resources/Private/Language/locallang_db.xlf:' . Form::TABLE_NAME . '.pages',
         'config' => [
             'type' => 'group',
             'internal_type' => 'db',
